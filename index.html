@@ -1,34 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First GitHub Website</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adhiparasakthi Engineering College</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    color:#333;
+}
+
+header{
+    background:#003366;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+header img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    background:white;
+    padding:8px;
+}
+
+nav{
+    background:#00509e;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:20px;
+    font-weight:bold;
+}
+
+.hero{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h1{
+    color:#003366;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    background:#003366;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+section{
+    width:85%;
+    margin:auto;
+    padding:30px 0;
+}
+
+.cards{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.card{
+    width:280px;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 10px rgba(0,0,0,.1);
+}
+
+footer{
+    background:#003366;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+</style>
+
 </head>
 <body>
 
-    <header>
-        <h1>Welcome to My Website</h1>
-        <p>Hosted using GitHub</p>
-    </header>
+<header>
+    <img src="logo.png" alt="APEC Logo">
+    <h1>Adhiparasakthi Engineering College</h1>
+    <p>Melmaruvathur, Tamil Nadu</p>
+</header>
 
-    <main>
-        <section class="card">
-            <h2>About Me</h2>
-            <p>Hello! I'm a Computer Science student learning HTML, CSS, JavaScript, UI/UX, and GitHub.</p>
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Departments</a>
+    <a href="#">Admissions</a>
+    <a href="#">Contact</a>
+</nav>
 
-            <button onclick="showMessage()">Click Me</button>
+<div class="hero">
+    <h1>Welcome to APEC</h1>
+    <p>Empowering Students Through Quality Education and Innovation.</p>
 
-            <p id="message"></p>
-        </section>
-    </main>
+    <button onclick="welcome()">Know More</button>
 
-    <footer>
-        <p>© 2026 My First Website</p>
-    </footer>
+    <p id="msg"></p>
+</div>
 
-    <script src="script.js"></script>
+<section>
+<h2 style="text-align:center;color:#003366;">Our Highlights</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Computer Science</h3>
+<p>Modern computer laboratories with experienced faculty.</p>
+</div>
+
+<div class="card">
+<h3>Placements</h3>
+<p>Strong placement support and industry collaboration.</p>
+</div>
+
+<div class="card">
+<h3>Library</h3>
+<p>Well-equipped central library with digital resources.</p>
+</div>
+
+</div>
+</section>
+
+<footer>
+© 2026 Adhiparasakthi Engineering College | Sample GitHub Website
+</footer>
+
+<script>
+function welcome(){
+document.getElementById("msg").innerHTML =
+"Thank you for visiting the APEC sample website!";
+}
+</script>
 
 </body>
 </html>
