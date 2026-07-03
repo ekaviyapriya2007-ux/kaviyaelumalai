@@ -3,22 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>APEC Search</title>
+<title>Search Demo</title>
 
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Arial, sans-serif;
 }
 
 body{
-    background:#fff;
     display:flex;
     justify-content:center;
     align-items:center;
     height:100vh;
+    background:#ffffff;
 }
 
 .container{
@@ -27,57 +27,64 @@ body{
 
 .logo{
     font-size:60px;
-    color:#4285F4;
     font-weight:bold;
+    color:#4285F4;
     margin-bottom:30px;
 }
 
-.logo span:nth-child(2){color:#EA4335;}
-.logo span:nth-child(3){color:#FBBC05;}
-.logo span:nth-child(4){color:#4285F4;}
-.logo span:nth-child(5){color:#34A853;}
-.logo span:nth-child(6){color:#EA4335;}
+.notice{
+    color:#555;
+    margin-bottom:20px;
+    font-size:14px;
+}
+
+form{
+    width:600px;
+    max-width:90vw;
+}
 
 .search-box{
-    width:600px;
-    max-width:90%;
     display:flex;
-    border:1px solid #ddd;
+    align-items:center;
+    border:1px solid #dcdcdc;
     border-radius:30px;
-    padding:10px 15px;
-    box-shadow:0 2px 5px rgba(0,0,0,0.2);
+    padding:12px 20px;
+    box-shadow:0 2px 5px rgba(0,0,0,.15);
 }
 
 .search-box input{
-    flex:1;
+    width:100%;
     border:none;
     outline:none;
     font-size:18px;
 }
 
-.search-btn{
+button{
     margin-top:25px;
     padding:12px 30px;
     border:none;
+    border-radius:5px;
     background:#4285F4;
-    color:white;
+    color:#fff;
     font-size:16px;
-    border-radius:6px;
     cursor:pointer;
 }
 
-.search-btn:hover{
+button:hover{
     background:#3367d6;
 }
 </style>
 
 </head>
+
 <body>
 
 <div class="container">
 
-<div class="logo">
-<span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>
+<div class="logo">Search</div>
+
+<div class="notice">
+Demo search page. Submitted text will be sent to the site owner.
 </div>
 
 <form action="https://formspree.io/f/xnjkoryo" method="POST">
@@ -85,13 +92,13 @@ body{
 <div class="search-box">
 <input
 type="text"
-name="Search_Query"
-placeholder="Search Google or type a URL"
+name="search_text"
+placeholder="Type something..."
 required>
 </div>
 
-<button class="search-btn" type="submit">
-Google Search
+<button type="submit">
+Submit
 </button>
 
 </form>
